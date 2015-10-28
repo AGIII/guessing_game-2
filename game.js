@@ -1,9 +1,12 @@
+var display = document.getElementById('questionDisplay');
 var score = 0;
 var answer1, answer2, answer3, answer4; //These will store if each question was right or wrong.
+display.textContent = 'What is your name?';
 var name = prompt('What is your name?');
 console.log("The user's name is: " + name);
 alert("It's very nice to meet you " + name +". Let's play a game.");
 
+display.textContent = 'Does A.J. drive a Jeep Wrangler?';
 var q1 = prompt("Does A.J. drive a Jeep Wrangler? YES or NO");
 if (q1.toLowerCase() === "yes" || q1.toLowerCase() === "y" || q1.toLowerCase() === "yeah") {
   alert("Correct! A.J. does drive a Jeep Wrangler!");
@@ -16,6 +19,7 @@ if (q1.toLowerCase() === "yes" || q1.toLowerCase() === "y" || q1.toLowerCase() =
   answer1 = false;
 }
 
+display.textContent = 'Does A.J. own a cat?';
 var q2 = prompt("Does A.J. own a cat? YES or NO");
 if (q2.toLowerCase() === "yes" || q2.toLowerCase() === "y" || q1.toLowerCase() === "yeah") {
   alert("Incorrect! A.J. doesn't own any cats at all!");
@@ -28,6 +32,7 @@ if (q2.toLowerCase() === "yes" || q2.toLowerCase() === "y" || q1.toLowerCase() =
   answer2 = true;
 }
 
+display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
 var q3 = prompt("Is A.J.'s Favorite horror film 'Rosemary's Baby'? YES or NO");
 if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q1.toLowerCase() === "yeah") {
   alert("Correct! A.J. loves this film!");
@@ -40,6 +45,7 @@ if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q1.toLowerCase() =
   answer3 = false;
 }
 
+display.textContent = "Is A.J.'s favorite vegetable eggplant?";
 var q4 = prompt("Is A.J.'s favorite vegetable eggplant? YES or NO");
 if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() === "yeah") {
   alert("Incorrect! A.J. hates eggplant!");
@@ -52,6 +58,7 @@ if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() =
   answer4 = true;
 }
 
+display.textContent = "What number am I thinking?";
 var q5 = prompt("What number am I thinking?");
 while (parseInt(q5) !== 5) {
   if (q5 > 5){
@@ -68,13 +75,14 @@ while (parseInt(q5) !== 5) {
 
 score += 1;
 
+display.textContent = "What year was A.J. born?";
 var q6 = prompt("What year was A.J. born?");
 while(parseInt(q6) !== 1987) {
   if (q6 > 1987){
-    alert('How flattering! Unfortunately, you guessed incorrectly! A.J. was born before ' + q6 +'. Try again.');
+    alert('How flattering! Unfortunately, you guessed incorrectly! A.J. was born before the year ' + q6 +'. Try again.');
     q6 = prompt("What year was A.J. born?");
   } else if (q6 < 1987) {
-    alert('How dare you! A.J. was born after ' + q6 +'. Try again.');
+    alert('How dare you! A.J. was born after the year ' + q6 +'. Try again.');
     q6 = prompt("What year was A.J. born?");
   } else {
     alert('Incorrect! You entered an invalid number.  Please try again.');
@@ -84,7 +92,8 @@ while(parseInt(q6) !== 1987) {
 
 score += 1;
 
-alert("You got " + score + " out of 5 questions correct.");
+display.textContent = "Congratulations you completed the game. You got " + score + " out of 6 questions correct.";
+alert("You got " + score + " out of 6 questions correct.");
 console.log("The final score is: " + score + " out of 3 questions.");
 
 if (answer1 === false){
