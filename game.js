@@ -1,5 +1,5 @@
 var score = 0;
-var answer1, answer2, answer3; //These will store if each question was right or wrong.
+var answer1, answer2, answer3, answer4; //These will store if each question was right or wrong.
 var name = prompt('What is your name?');
 console.log("The user's name is: " + name);
 alert("It's very nice to meet you " + name +". Let's play a game.");
@@ -31,7 +31,7 @@ if (q2.toLowerCase() === "yes" || q2.toLowerCase() === "y" || q1.toLowerCase() =
 var q3 = prompt("Is A.J.'s Favorite horror film 'Rosemary's Baby'? YES or NO");
 if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q1.toLowerCase() === "yeah") {
   alert("Correct! A.J. loves this film!");
-  console.log('The user answered q3correctly with a: ' + q3);
+  console.log('The user answered q3 correctly with a: ' + q3);
   score += 1;
   answer3 = true;
 } else {
@@ -40,7 +40,19 @@ if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q1.toLowerCase() =
   answer3 = false;
 }
 
-alert("You got " + score + " out of 3 questions correct.");
+var q4 = prompt("Is A.J.'s favorite vegetable eggplant? YES or NO");
+if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() === "yeah") {
+  alert("Incorrect! A.J. hates eggplant!");
+  console.log('The user answered q4 incorrectly with a: ' + q4);
+  answer4 = false;
+} else {
+  alert("Correct! A.J. hates eggplant!");
+  console.log('The user answered q4 correctly with a: ' + q4);
+  score += 1;
+  answer4 = true;
+}
+
+alert("You got " + score + " out of 4 questions correct.");
 console.log("The final score is: " + score + " out of 3 questions.");
 
 if (answer1 === false){
@@ -51,6 +63,9 @@ if (answer2 === false) {
 }
 if (answer3 === false) {
   alert("Be sure to remember that A.J.'s favorite horror film is 'Rosemary's Baby' because you got that question wrong!");
+}
+if (answer4 === false) {
+  alert("Be sure to remember that A.J. hates eggplant because you got that question wrong!");
 }
 
  alert("Thanks for playing and be sure to refresh if you would like to play again.");
