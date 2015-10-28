@@ -68,6 +68,22 @@ while (parseInt(q5) !== 5) {
 
 score += 1;
 
+var q6 = prompt("What year was A.J. born?");
+while(parseInt(q6) !== 1987) {
+  if (q6 > 1987){
+    alert('How flattering! Unfortunately, you guessed incorrectly! A.J. was born before ' + q6 +'. Try again.');
+    q6 = prompt("What year was A.J. born?");
+  } else if (q6 < 1987) {
+    alert('How dare you! A.J. was born after ' + q6 +'. Try again.');
+    q6 = prompt("What year was A.J. born?");
+  } else {
+    alert('Incorrect! You entered an invalid number.  Please try again.');
+    q6 = prompt("What year was A.J. born?");
+  }
+}
+
+score += 1;
+
 alert("You got " + score + " out of 5 questions correct.");
 console.log("The final score is: " + score + " out of 3 questions.");
 
