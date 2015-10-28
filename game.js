@@ -52,7 +52,23 @@ if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() =
   answer4 = true;
 }
 
-alert("You got " + score + " out of 4 questions correct.");
+var q5 = prompt("What number am I thinking?");
+while (parseInt(q5) !== 5) {
+  if (q5 > 5){
+    alert('Incorrect! Your guess was too high. Try again');
+    q5 = prompt("What number am I thinking?");
+  } else if (q5 < 5) {
+    alert('Incorrect! Your guess was too low. Try again');
+    q5 = prompt("What number am I thinking?");
+  } else {
+    alert('Incorrect! You entered an invalid number. Please try again.');
+    q5 = prompt("What number am I thinking?");
+  }
+}
+
+score += 1;
+
+alert("You got " + score + " out of 5 questions correct.");
 console.log("The final score is: " + score + " out of 3 questions.");
 
 if (answer1 === false){
