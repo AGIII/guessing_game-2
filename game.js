@@ -45,7 +45,7 @@ var secondQuestion = function(){
 secondQuestion();
 
 display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
-  var thirdQuestion = function() {
+var thirdQuestion = function() {
   var q3 = prompt("Is A.J.'s Favorite horror film 'Rosemary's Baby'? YES or NO");
   if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q3.toLowerCase() === "yeah") {
     alert("Correct! A.J. loves this film!");
@@ -64,7 +64,7 @@ display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
 thirdQuestion();
 
 display.textContent = "Is A.J.'s favorite vegetable eggplant?";
-  var fourthQuestion = function() {
+var fourthQuestion = function() {
   var q4 = prompt("Is A.J.'s favorite vegetable eggplant? YES or NO");
   if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() === "yeah") {
     alert("Incorrect! A.J. hates eggplant!");
