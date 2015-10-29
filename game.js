@@ -6,6 +6,7 @@ var name = prompt('What is your name?');
 console.log("The user's name is: " + name);
 alert("It's very nice to meet you " + name +". Let's play a game.");
 
+
 display.textContent = 'Does A.J. drive a Jeep Wrangler?';
 var firstQuestion = function(){
   var q1 = prompt("Does A.J. drive a Jeep Wrangler? YES or NO");
@@ -23,10 +24,11 @@ var firstQuestion = function(){
     firstQuestion();
   }
 }
-firstQuestion();
 
-display.textContent = 'Does A.J. own a cat?';
+
+
 var secondQuestion = function(){
+  display.textContent = 'Does A.J. own a cat?';
   var q2 = prompt("Does A.J. own a cat? YES or NO");
   if (q2.toLowerCase() === "yes" || q2.toLowerCase() === "y" || q2.toLowerCase() === "yeah") {
     alert("Incorrect! A.J. doesn't own any cats at all!");
@@ -42,10 +44,10 @@ var secondQuestion = function(){
     secondQuestion();
   }
 }
-secondQuestion();
 
-display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
+
 var thirdQuestion = function() {
+  display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
   var q3 = prompt("Is A.J.'s Favorite horror film 'Rosemary's Baby'? YES or NO");
   if (q3.toLowerCase() === "yes" || q3.toLowerCase() === "y" || q3.toLowerCase() === "yeah") {
     alert("Correct! A.J. loves this film!");
@@ -61,10 +63,10 @@ var thirdQuestion = function() {
     thirdQuestion();
   }
 }
-thirdQuestion();
 
-display.textContent = "Is A.J.'s favorite vegetable eggplant?";
+
 var fourthQuestion = function() {
+  display.textContent = "Is A.J.'s favorite vegetable eggplant?";
   var q4 = prompt("Is A.J.'s favorite vegetable eggplant? YES or NO");
   if (q4.toLowerCase() === "yes" || q4.toLowerCase() === "y" || q4.toLowerCase() === "yeah") {
     alert("Incorrect! A.J. hates eggplant!");
@@ -80,57 +82,88 @@ var fourthQuestion = function() {
     fourthQuestion();
   }
 }
-fourthQuestion();
 
-display.textContent = "What number am I thinking?";
-var q5 = prompt("What number am I thinking?");
-while (parseInt(q5) !== 5) {
-  if (q5 > 5){
-    alert('Incorrect! Your guess was too high. Try again');
-    q5 = prompt("What number am I thinking?");
-  } else if (q5 < 5) {
-    alert('Incorrect! Your guess was too low. Try again');
-    q5 = prompt("What number am I thinking?");
-  } else {
-    alert('Incorrect! You entered an invalid number. Please try again.');
-    q5 = prompt("What number am I thinking?");
+
+function fifthQuestion() {
+  display.textContent = "What number am I thinking?";
+  var q5 = prompt("What number am I thinking?");
+  while (parseInt(q5) !== 5) {
+    if (q5 > 5){
+      alert('Incorrect! Your guess was too high. Try again');
+      q5 = prompt("What number am I thinking?");
+    } else if (q5 < 5) {
+      alert('Incorrect! Your guess was too low. Try again');
+      q5 = prompt("What number am I thinking?");
+    } else {
+      alert('Incorrect! You entered an invalid number. Please try again.');
+      q5 = prompt("What number am I thinking?");
+    }
   }
 }
 
-score += 1;
 
-display.textContent = "What year was A.J. born?";
-var q6 = prompt("What year was A.J. born?");
-while(parseInt(q6) !== 1987) {
-  if (q6 > 1987){
-    alert('How flattering! Unfortunately, you guessed incorrectly! A.J. was born before the year ' + q6 +'. Try again.');
-    q6 = prompt("What year was A.J. born?");
-  } else if (q6 < 1987) {
-    alert('How dare you! A.J. was born after the year ' + q6 +'. Try again.');
-    q6 = prompt("What year was A.J. born?");
-  } else {
-    alert('Incorrect! You entered an invalid number.  Please try again.');
-    q6 = prompt("What year was A.J. born?");
+
+
+function sixthQuestion() {
+  display.textContent = "What year was A.J. born?";
+  var q6 = prompt("What year was A.J. born?");
+  while(parseInt(q6) !== 1987) {
+    if (q6 > 1987){
+      alert('How flattering! Unfortunately, you guessed incorrectly! A.J. was born before the year ' + q6 +'. Try again.');
+      q6 = prompt("What year was A.J. born?");
+    } else if (q6 < 1987) {
+      alert('How dare you! A.J. was born after the year ' + q6 +'. Try again.');
+      q6 = prompt("What year was A.J. born?");
+    } else {
+      alert('Incorrect! You entered an invalid number.  Please try again.');
+      q6 = prompt("What year was A.J. born?");
+    }
   }
 }
 
-score += 1;
 
-display.textContent = "Congratulations you completed the game. You got " + score + " out of 6 questions correct.";
-alert("You got " + score + " out of 6 questions correct.");
-console.log("The final score is: " + score + " out of 3 questions.");
 
-if (answer1 === false){
-  alert("Be sure to remember that A.J. drives a Jeep Wrangler because you got that question wrong!");
-}
-if (answer2 === false) {
-  alert("Be sure to remember that A.J. doesn't own any cats because you got that question wrong!");
-}
-if (answer3 === false) {
-  alert("Be sure to remember that A.J.'s favorite horror film is 'Rosemary's Baby' because you got that question wrong!");
-}
-if (answer4 === false) {
-  alert("Be sure to remember that A.J. hates eggplant because you got that question wrong!");
-}
 
- alert("Thanks for playing and be sure to refresh if you would like to play again.");
+function endOfGame() {
+  display.textContent = "Congratulations you completed the game. You got " + score + " out of 6 questions correct.";
+  alert("You got " + score + " out of 6 questions correct.");
+  console.log("The final score is: " + score + " out of 3 questions.");
+
+  if (answer1 === false){
+    alert("Be sure to remember that A.J. drives a Jeep Wrangler because you got that question wrong!");
+  }
+  if (answer2 === false) {
+    alert("Be sure to remember that A.J. doesn't own any cats because you got that question wrong!");
+  }
+  if (answer3 === false) {
+    alert("Be sure to remember that A.J.'s favorite horror film is 'Rosemary's Baby' because you got that question wrong!");
+  }
+  if (answer4 === false) {
+    alert("Be sure to remember that A.J. hates eggplant because you got that question wrong!");
+  }
+
+   alert("Thanks for playing and be sure to refresh if you would like to play again.");
+
+}
+  firstQuestion();
+  secondQuestion();
+  thirdQuestion();
+  fourthQuestion();
+  fifthQuestion();
+  score += 1;
+  sixthQuestion();
+  score += 1;
+
+  endOfGame();
+
+
+
+
+
+
+
+
+
+
+
+
