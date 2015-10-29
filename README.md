@@ -15,3 +15,12 @@ Why did the hipster burn his tongue?
 
 Because he ate his food before it was cool.
 
+Oct 29th:
+Updates to the code today was worked on by the following individuals:
+
+Driver: Sawako Ishida
+Navigator: A.J. Wohlfert
+
+  Updated JavaScript & HTML. Question Alerts are now displayed on the page.
+  Wrapped questions in functions.
+
