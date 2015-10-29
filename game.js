@@ -7,6 +7,13 @@ var ans6 = document.getElementById("response6");
 
 var fs1 = document.getElementById("finalScore");
 
+var r1 = document.getElementById("remember1");
+var r2 = document.getElementById("remember2");
+var r3 = document.getElementById("remember3");
+var r4 = document.getElementById("remember4");
+
+var ty = document.getElementById("thanks");
+
 var display = document.getElementById('questionDisplay');
 var score = 0;
 var answer1, answer2, answer3, answer4; //These will store if each question was right or wrong.
@@ -108,6 +115,7 @@ function fifthQuestion() {
       q5 = prompt("What number am I thinking?");
     }
   }
+  ans5.innerHTML = "You guessed the correct number of 5!";
 }
 
 
@@ -128,6 +136,7 @@ function sixthQuestion() {
       q6 = prompt("What year was A.J. born?");
     }
   }
+  ans6.innerHTML = "You guessed correctly! A.J. was born in 1987!";
 }
 
 
@@ -139,19 +148,19 @@ function endOfGame() {
   console.log("The final score is: " + score + " out of 3 questions.");
 
   if (answer1 === false){
-    alert("Be sure to remember that A.J. drives a Jeep Wrangler because you got that question wrong!");
+    r1.innerHTML = "Be sure to remember that A.J. drives a Jeep Wrangler because you got that question wrong!";
   }
   if (answer2 === false) {
-    alert("Be sure to remember that A.J. doesn't own any cats because you got that question wrong!");
+    r2.innerHTML = "Be sure to remember that A.J. doesn't own any cats because you got that question wrong!";
   }
   if (answer3 === false) {
-    alert("Be sure to remember that A.J.'s favorite horror film is 'Rosemary's Baby' because you got that question wrong!");
+    r3.innerHTML = "Be sure to remember that A.J.'s favorite horror film is 'Rosemary's Baby' because you got that question wrong!";
   }
   if (answer4 === false) {
-    alert("Be sure to remember that A.J. hates eggplant because you got that question wrong!");
+    r4.innerHTML = "Be sure to remember that A.J. hates eggplant because you got that question wrong!";
   }
 
-   alert("Thanks for playing and be sure to refresh if you would like to play again.");
+   ty.innerHTML = "Thanks for playing and be sure to refresh if you would like to play again.";
 
 }
   firstQuestion();
