@@ -46,7 +46,7 @@ display.textContent = 'Does A.J. drive a Jeep Wrangler?';
     ans1.className = 'incorrect';
     firstQuestion();
   }
-}
+};
 
 var secondQuestion = function(){
   display.textContent = 'Does A.J. own a cat?';
@@ -68,7 +68,7 @@ var secondQuestion = function(){
     ans2.className = 'incorrect';
     secondQuestion();
   }
-}
+};
 
 var thirdQuestion = function() {
   display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
@@ -90,7 +90,7 @@ var thirdQuestion = function() {
     ans3.className = 'incorrect';
     thirdQuestion();
   }
-}
+};
 
 var fourthQuestion = function() {
   display.textContent = "Is A.J.'s favorite vegetable eggplant?";
@@ -112,7 +112,7 @@ var fourthQuestion = function() {
     ans4.className = 'incorrect';
     fourthQuestion();
   }
-}
+};
 
 function fifthQuestion() {
   display.textContent = "What number am I thinking?";
