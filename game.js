@@ -5,6 +5,12 @@ var ans3 = document.getElementById("response3");
 var ans4 = document.getElementById("response4");
 var ans5 = document.getElementById("response5");
 var ans6 = document.getElementById("response6");
+var pic1 = document.getElementById('pic1');
+var pic2 = document.getElementById('pic2');
+var pic3 = document.getElementById('pic3');
+var pic4 = document.getElementById('pic4');
+var pic5 = document.getElementById('pic5');
+var pic6 = document.getElementById('pic6');
 var fs1 = document.getElementById("finalScore");
 var r1 = document.getElementById("remember1");
 var r2 = document.getElementById("remember2");
@@ -28,6 +34,7 @@ display.textContent = 'Does A.J. drive a Jeep Wrangler?';
     console.log('The user answered q1 correctly with a: ' + q1);
     score += 1;
     answer1 = true;
+    pic1.innerHTML = '<img src="jeep.jpg" alt="Jeep Wrangler" height="200">';
   } else if (q1.toLowerCase() === "no" || q1.toLowerCase() === "n" || q1.toLowerCase() === "nope"){
     ans1.innerHTML = "Incorrect! A.J. does drive a Jeep Wrangler";
     console.log('The user answered q1 incorrectly with a: ' + q1);
@@ -50,6 +57,7 @@ var secondQuestion = function(){
     console.log('The user answered q2 correctly with a: ' + q2);
     score += 1;
     answer2 = true;
+    pic2.innerHTML = '<img src="nocats.jpg" alt="No Cat" height="200">';
   } else {
     ans2.innerHTML = "'" + q2 + "' is an invalid answer. Try again.";
     secondQuestion();
@@ -64,6 +72,7 @@ var thirdQuestion = function() {
     console.log('The user answered q3 correctly with a: ' + q3);
     score += 1;
     answer3 = true;
+    pic3.innerHTML = '<img src="rbaby.jpg" alt="Rosemary\'s Baby" height="200">';
   } else if (q3.toLowerCase() === "no" || q3.toLowerCase() === "n" || q3.toLowerCase() === "nope"){
     ans3.innerHTML = "Incorrect! AJ loves that movie!";
     console.log('The user answered q3 incorrectly with a: ' + q3);
@@ -86,6 +95,7 @@ var fourthQuestion = function() {
     console.log('The user answered q4 correctly with a: ' + q4);
     score += 1;
     answer4 = true;
+    pic4.innerHTML = '<img src="noeggplant.jpg" alt="No Eggplant" height="200">';
   } else {
     ans4.innerHTML = "'" + q4 + "' is an invalid answer. Try again.";
     fourthQuestion();
@@ -109,6 +119,7 @@ function fifthQuestion() {
   }
   ans5.innerHTML = "You guessed the correct number of 5!";
   score += 1;
+  pic5.innerHTML = '<img src="5.jpg" alt="Number" height="200">';
 }
 
 function sixthQuestion() {
@@ -128,6 +139,7 @@ function sixthQuestion() {
   }
   ans6.innerHTML = "You guessed correctly! A.J. was born in 1987!";
   score += 1;
+  pic6.innerHTML = '<img src="1987.jpg" alt="Birth Year" height="200">';
 }
 
 function endOfGame() {
@@ -150,10 +162,10 @@ function endOfGame() {
    ty.innerHTML = "Thanks for playing and be sure to refresh if you would like to play again.";
 }
 
-firstQuestion();
-secondQuestion();
-thirdQuestion();
-fourthQuestion();
-fifthQuestion();
-sixthQuestion();
-endOfGame();
+setTimeout(firstQuestion, 1000);
+setTimeout(secondQuestion, 1020);
+setTimeout(thirdQuestion, 1040);
+setTimeout(fourthQuestion, 1060);
+setTimeout(fifthQuestion, 1080);
+setTimeout(sixthQuestion, 1100);
+setTimeout(endOfGame, 1120);
