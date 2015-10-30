@@ -1,3 +1,4 @@
+var meetGreet = document.getElementById("greeting");
 var ans1 = document.getElementById("response1");
 var ans2 = document.getElementById("response2");
 var ans3 = document.getElementById("response3");
@@ -17,7 +18,7 @@ var answer1, answer2, answer3, answer4; //These will store if each question was 
 display.textContent = 'What is your name?';
 var name = prompt('What is your name?');
 console.log("The user's name is: " + name);
-alert("It's very nice to meet you " + name +". Let's play a game.");
+meetGreet.innerHTML = ("It's very nice to meet you " + name +". Let's play a game.");
 
 var firstQuestion = function(){
 display.textContent = 'Does A.J. drive a Jeep Wrangler?';
