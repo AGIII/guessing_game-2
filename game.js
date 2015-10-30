@@ -4,27 +4,23 @@ var ans3 = document.getElementById("response3");
 var ans4 = document.getElementById("response4");
 var ans5 = document.getElementById("response5");
 var ans6 = document.getElementById("response6");
-
 var fs1 = document.getElementById("finalScore");
-
 var r1 = document.getElementById("remember1");
 var r2 = document.getElementById("remember2");
 var r3 = document.getElementById("remember3");
 var r4 = document.getElementById("remember4");
-
 var ty = document.getElementById("thanks");
-
 var display = document.getElementById('questionDisplay');
 var score = 0;
 var answer1, answer2, answer3, answer4; //These will store if each question was right or wrong.
+
 display.textContent = 'What is your name?';
 var name = prompt('What is your name?');
 console.log("The user's name is: " + name);
 alert("It's very nice to meet you " + name +". Let's play a game.");
 
-
-display.textContent = 'Does A.J. drive a Jeep Wrangler?';
 var firstQuestion = function(){
+display.textContent = 'Does A.J. drive a Jeep Wrangler?';
   var q1 = prompt("Does A.J. drive a Jeep Wrangler? YES or NO");
   if (q1.toLowerCase() === "yes" || q1.toLowerCase() === "y" || q1.toLowerCase() === "yeah") {
     ans1.innerHTML = "Correct! A.J. does drive a Jeep Wrangler!";
@@ -40,8 +36,6 @@ var firstQuestion = function(){
     firstQuestion();
   }
 }
-
-
 
 var secondQuestion = function(){
   display.textContent = 'Does A.J. own a cat?';
@@ -61,7 +55,6 @@ var secondQuestion = function(){
   }
 }
 
-
 var thirdQuestion = function() {
   display.textContent = 'Is A.J.\'s favorite horror film \'Rosemary\'s Baby\'?';
   var q3 = prompt("Is A.J.'s Favorite horror film 'Rosemary's Baby'? YES or NO");
@@ -79,7 +72,6 @@ var thirdQuestion = function() {
     thirdQuestion();
   }
 }
-
 
 var fourthQuestion = function() {
   display.textContent = "Is A.J.'s favorite vegetable eggplant?";
@@ -99,7 +91,6 @@ var fourthQuestion = function() {
   }
 }
 
-
 function fifthQuestion() {
   display.textContent = "What number am I thinking?";
   var q5 = prompt("What number am I thinking?");
@@ -116,10 +107,8 @@ function fifthQuestion() {
     }
   }
   ans5.innerHTML = "You guessed the correct number of 5!";
+  score += 1;
 }
-
-
-
 
 function sixthQuestion() {
   display.textContent = "What year was A.J. born?";
@@ -137,10 +126,8 @@ function sixthQuestion() {
     }
   }
   ans6.innerHTML = "You guessed correctly! A.J. was born in 1987!";
+  score += 1;
 }
-
-
-
 
 function endOfGame() {
   display.textContent = "Congratulations you completed the game. You got " + score + " out of 6 questions correct.";
@@ -159,20 +146,16 @@ function endOfGame() {
   if (answer4 === false) {
     r4.innerHTML = "Be sure to remember that A.J. hates eggplant because you got that question wrong!";
   }
-
    ty.innerHTML = "Thanks for playing and be sure to refresh if you would like to play again.";
-
 }
-  firstQuestion();
-  secondQuestion();
-  thirdQuestion();
-  fourthQuestion();
-  fifthQuestion();
-  score += 1;
-  sixthQuestion();
-  score += 1;
 
-  endOfGame();
+firstQuestion();
+secondQuestion();
+thirdQuestion();
+fourthQuestion();
+fifthQuestion();
+sixthQuestion();
+endOfGame();
 
 
 
