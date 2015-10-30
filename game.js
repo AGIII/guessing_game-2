@@ -156,15 +156,3 @@ fourthQuestion();
 fifthQuestion();
 sixthQuestion();
 endOfGame();
-
-
-
-
-
-
-
-
-
-
-
-
